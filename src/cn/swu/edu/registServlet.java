@@ -23,11 +23,11 @@ public class registServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
-		String sql = "insert into  test1(name,password) values(?,?)";
+		String sql = "insert into test1(username,password) values(?,?)";
 		PrintWriter out = response.getWriter();
+
 		Connection connection = null;
 		PreparedStatement statement = null;
-		out.println("Regist successful!");
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -38,7 +38,8 @@ public class registServlet extends HttpServlet {
 			statement = connection.prepareStatement(sql);
 			statement.setString(1,username);
 			statement.setString(2,password);
-			statement.executeQuery();
+			out.println("Regist successful! Welcome "+ username +".");
+			statement.executeUpdate();
 			
 			
 		} catch (Exception e) {
