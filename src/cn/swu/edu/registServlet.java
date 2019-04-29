@@ -33,7 +33,7 @@ public class registServlet extends HttpServlet {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql:///test";
 			String user = "root";
-			String password2 = "mimashi123456";
+			String password2 = "";
 			connection = DriverManager.getConnection(url,user,password2);
 			statement = connection.prepareStatement(sql);
 			statement.setString(1,username);

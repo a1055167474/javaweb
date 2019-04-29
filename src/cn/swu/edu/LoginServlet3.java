@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
 
 
 public class LoginServlet3 extends HttpServlet {
@@ -28,21 +30,27 @@ public class LoginServlet3 extends HttpServlet {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
-
+		out.println(1);
 		try {
+			out.println(21);
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql:///test";
 			String user = "root";
-			String password2 = "mimashi123456";
+			String password2 = "";
 			connection = DriverManager.getConnection(url,user,password2);
 			statement = connection.prepareStatement(sql);
 			statement.setString(1,username);
 			statement.setString(2,password);
 			resultSet = statement.executeQuery();
-			
+			 out.println(3);
+	
 			if(resultSet.next()) {
 				int count = resultSet.getInt(1);
 				if(count > 0) {
+					Cookie c = new Cookie("username", username);
+                                        response.addCookie(c);
+                                        response.sendRedirect("index.jsp");
+
 					out.print("hello" + username);
 				}else {
 					out.print("sorry" + username);

@@ -50,6 +50,16 @@
                 <servlet-name>registServlet</servlet-name>
                 <url-pattern>/registServlet</url-pattern>
         </servlet-mapping>
+	
+	<servlet>
+                <servlet-name>CustomerServlet</servlet-name>
+                <servlet-class>cn.swu.edu.CustomerServlet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+                <servlet-name>CustomerServlet</servlet-name>
+                <url-pattern>*.do</url-pattern>
+        </servlet-mapping>
 
 
 </web-app>
