@@ -37,7 +37,7 @@
 
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
-                    <a href="javascript:;">BieJun</a>
+                    <a href="javascript:;">tomcat</a>
                     <dl class="layui-nav-child">
                         <dd><a href="">帮助中心</a></dd>
                         <dd><a href="Login.jsp">退出</a></dd>
@@ -74,7 +74,7 @@
                                 <a href="javascript:;">页面</a>
                                 <dl class="layui-nav-child">
                                     <dd>
-                                        <a href="login.html">登录页</a>
+                                        <a href="Login.jsp">登录页</a>
                                     </dd>
                                 </dl>
                             </dd>
@@ -100,10 +100,6 @@
                 <ul id="appTabs" class="layui-tab-title custom-tab"></ul>
                 <div id="appTabPage" class="layui-tab-content"></div>
             </div>
-        </div>
-
-        <div class="layui-footer">
-            <p>© 2018 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
         </div>
 
         <div class="mobile-mask"></div>

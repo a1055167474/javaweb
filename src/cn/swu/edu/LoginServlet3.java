@@ -30,9 +30,7 @@ public class LoginServlet3 extends HttpServlet {
 		Connection connection = null;
 		PreparedStatement statement = null;
 		ResultSet resultSet = null;
-		out.println(1);
 		try {
-			out.println(21);
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql:///test";
 			String user = "root";
@@ -42,7 +40,6 @@ public class LoginServlet3 extends HttpServlet {
 			statement.setString(1,username);
 			statement.setString(2,password);
 			resultSet = statement.executeQuery();
-			 out.println(3);
 	
 			if(resultSet.next()) {
 				int count = resultSet.getInt(1);
