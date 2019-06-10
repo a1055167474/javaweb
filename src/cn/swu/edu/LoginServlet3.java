@@ -41,6 +41,7 @@ public class LoginServlet3 extends HttpServlet {
 			statement.setString(2,password);
 			resultSet = statement.executeQuery();
 	
+
 			if(resultSet.next()) {
 				int count = resultSet.getInt(1);
 				if(count > 0) {

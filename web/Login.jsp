@@ -50,7 +50,7 @@
         </div>
 </div>
 	<div class="form-item">
-	(登录名：tomcat&nbsp;密码：tomcat)
+	(登录名：tomcat &nbsp;密码：tomcat)
 	</div>
     </body>
 </html>

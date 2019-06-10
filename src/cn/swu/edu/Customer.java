@@ -1,5 +1,6 @@
 package cn.swu.edu;
 
+
 public class Customer {
 
     private Integer id;

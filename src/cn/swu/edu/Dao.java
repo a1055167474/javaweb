@@ -18,7 +18,6 @@ import cn.swu.edu.JdbcUtils;
  * 当前DAO 直接在方法中获取数据库连接。
  * 整个DAO 采取DBUtils 解决方案。
  * @author User
- *
  * @param <T> 当前 DAO 处理的实体类的类型是什么
  */
 public class Dao<T> {
